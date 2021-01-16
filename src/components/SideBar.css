@@ -1,0 +1,30 @@
+.side-bar{
+    border: 1px solid lightgray;
+    flex-basis: 35%;
+    height: 100vh;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.side-bar .top-bar{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+.side-bar .top-bar  input{
+    outline-width: 0;
+    border: none;
+    background-color: rgb(231, 231, 231);
+    padding: 3px 0;
+    border-radius: 3px;
+}
+.side-bar .top-bar span{
+cursor: pointer;
+}
+.side-bar .top-bar img{
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}

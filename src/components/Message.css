@@ -1,0 +1,34 @@
+.chat-middle-part .message img{
+    width: 35px;
+    border-radius: 50%;
+}
+.chat-middle-part .message{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.sender-message{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: white;
+    flex-direction: row-reverse;
+}
+.sender-message img{
+margin-left: 10px;
+width: 35px;
+border-radius: 50%;
+}
+.sender-message .message-info{
+    background-color: rebeccapurple;
+    padding: 10px;
+    border-radius: 10px;
+}
+.chat-middle-part .message img{
+    margin-right: 10px;
+}
+.message-info{
+    background-color:rgb(231, 231, 231);
+    padding: 10px;
+    border-radius: 10px;
+}

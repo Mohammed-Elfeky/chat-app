@@ -1,0 +1,49 @@
+.add-chat{
+    background-color: blueviolet;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-chat .input-box{
+    width: 50%;
+    background-color:#42b790;
+    box-sizing: border-box;
+    padding: 50px 10px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+}
+.add-chat .input-box input{
+    height: 30px;
+    border: none;
+    background: none;
+    outline-width: 0;
+    box-sizing: border-box;
+    padding: 0px 5px;
+    color: white;  
+    border-bottom: 2px solid white;
+}
+.add-chat .input-box .validation-error{
+    color: rgb(182, 48, 48);
+    margin-top: 10px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: .5; /* Firefox */
+}
+.add-chat .close{
+    position: absolute;
+    right: 5%;
+    top: 8%;
+    cursor: pointer;
+    color: white;
+}
+.remove{
+    display: none;
+}
