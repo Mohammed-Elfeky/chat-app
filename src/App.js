@@ -1,10 +1,9 @@
-import Dashboard from './dashboard'
 import { connect } from 'react-redux';
-import { logIn,logOut } from './action'
+import { logIn,logOut } from './/redux/actions/action'
 import { useEffect } from 'react'
-import { auth , provider,db } from './firebase'
-import ChatContainer from './components/chatContainer'
-import Login from './components/login'
+import { auth , provider,db } from './firebase/firebase'
+import ChatContainer from './components/ChatContainer/chatContainer'
+import Login from './components/login/login'
 
 function App({ logIn ,logOut,user }) {
 

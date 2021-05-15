@@ -1,7 +1,6 @@
 import React from 'react'
 import './SingleChat.css'
-import avatar from '../1111.png'
-import {selectChat} from '../action'
+import {selectChat} from '../../redux/actions/action'
 import { connect } from 'react-redux';
  function SingleChat({id,chatName,selectChat,lastMessage,img}) {
 

@@ -1,14 +1,13 @@
 import React,{useState,useEffect} from 'react'
 import './Chat.css'
-import Message from './message'
+import Message from '../Message/message'
 import { connect } from 'react-redux';
-import {db} from '../firebase'
+import {db} from '../../firebase/firebase'
 import firebase from 'firebase'
 
 function Chat({chatName,chatId,user}) {
     const [messageHolder,setMessageHolder]=useState('')
     const [messages,setMessages]=useState([])
-    const [lastMessage,setLastMessage]=useState('')
     useEffect(() => {
         if(chatId){
           db.collection('chats')
@@ -49,9 +48,8 @@ function Chat({chatName,chatId,user}) {
 
         e.preventDefault();
 
-        
-
-        db.collection('chats')
+        if(messageHolder.length > 0){
+          db.collection('chats')
           .doc(chatId)
           .collection('messages')
           .add({
@@ -62,7 +60,8 @@ function Chat({chatName,chatId,user}) {
               senderEmail:user.email,
               senderName:user.id
           })
-
+        }
+        
         setMessageHolder('')
 
     }
@@ -78,7 +77,7 @@ function Chat({chatName,chatId,user}) {
             <div className="chat-middle-part">
                 {
                     messages.map(message=>{
-                        return <Message id={message.id} data={message.data}  />
+                        return <Message key={message.id} id={message.id} data={message.data}  />
                     })
                 }
             </div>
